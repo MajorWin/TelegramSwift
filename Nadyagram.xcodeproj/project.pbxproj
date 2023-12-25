@@ -154,7 +154,7 @@
 		2744018526E6344E0035C55D /* WidgetRecentPeersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2744018426E6344D0035C55D /* WidgetRecentPeersController.swift */; };
 		2744AE6D25B44E1500E8849F /* ExportedInvitationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2744AE6C25B44E1500E8849F /* ExportedInvitationController.swift */; };
 		2744AE7225B58E6C00E8849F /* invitations.tgs in Resources */ = {isa = PBXBuildFile; fileRef = 2744AE7125B58E6C00E8849F /* invitations.tgs */; };
-		2745FEC9274F943E00546B05 /* TelegramShare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C232EA911E1D07E700C4D38C /* TelegramShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2745FEC9274F943E00546B05 /* NadyagramShare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C232EA911E1D07E700C4D38C /* NadyagramShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2745FECB274F947000546B05 /* BuildConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 2745FECA274F947000546B05 /* BuildConfig */; };
 		2745FECD274F948600546B05 /* NumberPluralization in Frameworks */ = {isa = PBXBuildFile; productRef = 2745FECC274F948600546B05 /* NumberPluralization */; };
 		2745FECF274F94F200546B05 /* GZIP in Frameworks */ = {isa = PBXBuildFile; productRef = 2745FECE274F94F200546B05 /* GZIP */; };
@@ -1477,7 +1477,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2745FEC9274F943E00546B05 /* TelegramShare.appex in Embed App Extensions */,
+				2745FEC9274F943E00546B05 /* NadyagramShare.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2540,7 +2540,7 @@
 		C232EA0F1E156DE100C4D38C /* ContextCommandRowItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextCommandRowItem.swift; sourceTree = "<group>"; };
 		C232EA121E16552900C4D38C /* WebGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebGameViewController.swift; sourceTree = "<group>"; };
 		C232EA3C1E1C06EF00C4D38C /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
-		C232EA911E1D07E700C4D38C /* TelegramShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TelegramShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C232EA911E1D07E700C4D38C /* NadyagramShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NadyagramShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C232EA941E1D07E700C4D38C /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		C232EA961E1D07E700C4D38C /* TelegramShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TelegramShare.entitlements; sourceTree = "<group>"; };
 		C232EA971E1D07E700C4D38C /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
@@ -2890,7 +2890,7 @@
 		D093474D242DCFC4000ECA88 /* PeerMediaGroupPeersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerMediaGroupPeersController.swift; sourceTree = "<group>"; };
 		D0983E162568373E00467703 /* AppCenterAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppCenterAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0983E182568373E00467703 /* AppCenterCrashes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppCenterCrashes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D098C7151D7E175A007784E4 /* Telegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Telegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D098C7151D7E175A007784E4 /* Nadyagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nadyagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D098C7181D7E175A007784E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D098C71A1D7E175A007784E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D098C71F1D7E175A007784E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -6014,8 +6014,8 @@
 		D098C7161D7E175A007784E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D098C7151D7E175A007784E4 /* Telegram.app */,
-				C232EA911E1D07E700C4D38C /* TelegramShare.appex */,
+				D098C7151D7E175A007784E4 /* Nadyagram.app */,
+				C232EA911E1D07E700C4D38C /* NadyagramShare.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -6194,9 +6194,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C232EA901E1D07E700C4D38C /* TelegramShare */ = {
+		C232EA901E1D07E700C4D38C /* NadyagramShare */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C232EAA01E1D07E700C4D38C /* Build configuration list for PBXNativeTarget "TelegramShare" */;
+			buildConfigurationList = C232EAA01E1D07E700C4D38C /* Build configuration list for PBXNativeTarget "NadyagramShare" */;
 			buildPhases = (
 				C232EA8D1E1D07E700C4D38C /* Sources */,
 				C232EA8E1E1D07E700C4D38C /* Frameworks */,
@@ -6208,7 +6208,7 @@
 			);
 			dependencies = (
 			);
-			name = TelegramShare;
+			name = NadyagramShare;
 			packageProductDependencies = (
 				27F3B75527391E9200B81F10 /* TelegramIconsTheme */,
 				27F3B75B2739320000B81F10 /* SwiftSignalKit */,
@@ -6237,12 +6237,12 @@
 				27AAAD5B29A4A2E600F70A9A /* System */,
 			);
 			productName = TelegramShare;
-			productReference = C232EA911E1D07E700C4D38C /* TelegramShare.appex */;
+			productReference = C232EA911E1D07E700C4D38C /* NadyagramShare.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		D098C7141D7E175A007784E4 /* Telegram */ = {
+		D098C7141D7E175A007784E4 /* Nadyagram */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D098C7221D7E175A007784E4 /* Build configuration list for PBXNativeTarget "Telegram" */;
+			buildConfigurationList = D098C7221D7E175A007784E4 /* Build configuration list for PBXNativeTarget "Nadyagram" */;
 			buildPhases = (
 				C20D5AB61DAA94500042616A /* Copy Files */,
 				D098C7121D7E175A007784E4 /* Frameworks */,
@@ -6259,7 +6259,7 @@
 			dependencies = (
 				2745FEC8274F943200546B05 /* PBXTargetDependency */,
 			);
-			name = Telegram;
+			name = Nadyagram;
 			packageProductDependencies = (
 				27F3B75327391E6B00B81F10 /* TelegramIconsTheme */,
 				27B6D04E27393A2A00C785C7 /* TelegramApi */,
@@ -6326,7 +6326,7 @@
 				271891F72B08A7DB0008B238 /* LokiRng */,
 			);
 			productName = "Telegram-Mac";
-			productReference = D098C7151D7E175A007784E4 /* Telegram.app */;
+			productReference = D098C7151D7E175A007784E4 /* Nadyagram.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -6338,7 +6338,7 @@
 				DefaultBuildSystemTypeForWorkspace = Latest;
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = Telegram;
+				ORGANIZATIONNAME = Nadyagram;
 				TargetAttributes = {
 					C232EA901E1D07E700C4D38C = {
 						CreatedOnToolsVersion = 8.2;
@@ -6376,7 +6376,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D098C7101D7E175A007784E4 /* Build configuration list for PBXProject "Telegram" */;
+			buildConfigurationList = D098C7101D7E175A007784E4 /* Build configuration list for PBXProject "Nadyagram" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -6407,8 +6407,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				D098C7141D7E175A007784E4 /* Telegram */,
-				C232EA901E1D07E700C4D38C /* TelegramShare */,
+				D098C7141D7E175A007784E4 /* Nadyagram */,
+				C232EA901E1D07E700C4D38C /* NadyagramShare */,
 			);
 		};
 /* End PBXProject section */
@@ -7791,7 +7791,7 @@
 /* Begin PBXTargetDependency section */
 		2745FEC8274F943200546B05 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C232EA901E1D07E700C4D38C /* TelegramShare */;
+			target = C232EA901E1D07E700C4D38C /* NadyagramShare */;
 			targetProxy = 2745FEC7274F943200546B05 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -7908,7 +7908,7 @@
 			baseConfigurationReference = 278926CF2755222700923087 /* Release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconN;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_USE_OPTIMIZATION_PROFILE = NO;
@@ -7922,7 +7922,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 245682;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 6N38VWS5BX;
+				DEVELOPMENT_TEAM = 8Z32PX9VDF;
 				ENABLE_BITCODE = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -7961,7 +7961,7 @@
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.keepcoder.Telegram;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.fadimko.Nadyagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PRODUCTION;
@@ -7985,7 +7985,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 245682;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 6N38VWS5BX;
+				DEVELOPMENT_TEAM = 8Z32PX9VDF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -8007,7 +8007,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.keepcoder.Telegram.TelegramShare;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.fadimko.Nadyagram.TelegramShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
@@ -8030,7 +8030,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 245682;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 6N38VWS5BX;
+				DEVELOPMENT_TEAM = 8Z32PX9VDF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_OPTIMIZATION_LEVEL = s;
@@ -8053,7 +8053,7 @@
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				"OTHER_SWIFT_FLAGS[arch=*]" = "";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.keepcoder.Telegram.TelegramShare;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.fadimko.Nadyagram.TelegramShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
@@ -8115,7 +8115,7 @@
 			baseConfigurationReference = 278926CE27551B5600923087 /* Debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconN;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -8130,7 +8130,7 @@
 				CURRENT_PROJECT_VERSION = 245682;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 6N38VWS5BX;
+				DEVELOPMENT_TEAM = 8Z32PX9VDF;
 				ENABLE_BITCODE = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -8169,7 +8169,7 @@
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.keepcoder.Telegram;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.fadimko.Nadyagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -8186,7 +8186,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C232EAA01E1D07E700C4D38C /* Build configuration list for PBXNativeTarget "TelegramShare" */ = {
+		C232EAA01E1D07E700C4D38C /* Build configuration list for PBXNativeTarget "NadyagramShare" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C232EAA21E1D07E700C4D38C /* Debug */,
@@ -8195,7 +8195,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		D098C7101D7E175A007784E4 /* Build configuration list for PBXProject "Telegram" */ = {
+		D098C7101D7E175A007784E4 /* Build configuration list for PBXProject "Nadyagram" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D098C7211D7E175A007784E4 /* Debug */,
@@ -8204,7 +8204,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		D098C7221D7E175A007784E4 /* Build configuration list for PBXNativeTarget "Telegram" */ = {
+		D098C7221D7E175A007784E4 /* Build configuration list for PBXNativeTarget "Nadyagram" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D098C7241D7E175A007784E4 /* Debug */,

@@ -23,6 +23,6 @@
       location = "group:submodules/Sparkle/Sparkle.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Telegram.xcodeproj">
+      location = "group:/Users/administrator/code/TelegramSwift/Nadyagram.xcodeproj">
    </FileRef>
 </Workspace>

@@ -170,11 +170,11 @@ public extension String {
     
     static func stringForShortCallDurationSeconds(for seconds: Int32) -> String {
         if seconds < 60 {
-            return Telegram.strings().callShortSecondsCountable(Int(seconds))
+            return Nadyagram.strings().callShortSecondsCountable(Int(seconds))
         }
         else {
             let number = Int(seconds) / 60
-            return Telegram.strings().callShortMinutesCountable(number)
+            return Nadyagram.strings().callShortMinutesCountable(number)
         }
     }
     

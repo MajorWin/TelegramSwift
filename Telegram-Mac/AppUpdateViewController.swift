@@ -560,7 +560,7 @@ enum UpdaterSource : Equatable {
 
 
 private func resetUpdater() {
-    
+    return;
     #if !GITHUB
         let update:()->Void = {
             let url = Bundle.main.infoDictionary!["SUFeedURL"] as! String
