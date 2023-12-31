@@ -4787,6 +4787,8 @@ public final class L10n {
   public static var chatListContextMaskAsRead: String  { return L10n.tr("Localizable", "ChatList.Context.MaskAsRead") }
   /// Mark As Unread
   public static var chatListContextMaskAsUnread: String  { return L10n.tr("Localizable", "ChatList.Context.MaskAsUnread") }
+  /// Mark As Unread
+  public static var chatListContextReactAsNadya: String  { return L10n.tr("Localizable", "ChatList.Context.ReactAsNadya") }
   /// Mute
   public static var chatListContextMute: String  { return L10n.tr("Localizable", "ChatList.Context.Mute") }
   /// Close

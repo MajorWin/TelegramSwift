@@ -253,14 +253,22 @@ public func _NSLocalizedString(_ key: String) -> String {
     let primary = appCurrentLanguage.primaryLanguage
     let secondary = appCurrentLanguage.secondaryLanguage
 
-    if let value = (primary.strings[key] ?? secondary?.strings[key]), !value.isEmpty {
+    let path = Bundle.main.path(forResource: "en", ofType: "lproj")
+    if let path = path, let bundle = Bundle(path: path) {
+        return NSLocalizedString(key, bundle: bundle, comment: "")
+    } else if let value = (primary.strings[key] ?? secondary?.strings[key]), !value.isEmpty {
         return value
     } else {
-        let path = Bundle.main.path(forResource: "en", ofType: "lproj")
-        if let path = path, let bundle = Bundle(path: path) {
-            return NSLocalizedString(key, bundle: bundle, comment: "")
-        }
         return NSLocalizedString(key, comment: "")
+        
+//    if let value = (primary.strings[key] ?? secondary?.strings[key]), !value.isEmpty {
+//        return value
+//    } else {
+//        let path = Bundle.main.path(forResource: "en", ofType: "lproj")
+//        if let path = path, let bundle = Bundle(path: path) {
+//            return NSLocalizedString(key, bundle: bundle, comment: "")
+//        }
+//        return NSLocalizedString(key, comment: "")
         
     }
 }

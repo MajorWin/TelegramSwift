@@ -617,6 +617,9 @@ class PeerListContainerView : Control {
     fileprivate var showDownloads:(()->Void)? = nil
     fileprivate var hideDownloads:(()->Void)? = nil
     
+    private let reactToAllAsNadyaButton = TextButton(frame: .zero)
+    private var reactToAllAsNadyaIsSet = false
+
     
     var searchViewRect: NSRect {
         var y = navigationHeight
@@ -657,6 +660,8 @@ class PeerListContainerView : Control {
         
         containerView.addSubview(statusContainer)
         
+        containerView.addSubview(reactToAllAsNadyaButton)
+        
         containerView.addSubview(searchView)
         
         addSubview(borderView)
@@ -667,7 +672,9 @@ class PeerListContainerView : Control {
         
         titleView.scaleOnClick = true
         
-       
+        reactToAllAsNadyaButton.scaleOnClick = true
+        reactToAllAsNadyaButton._thatFit = true
+        reactToAllAsNadyaButton.disableActions()
         
         updateLocalizationAndTheme(theme: theme)
         
@@ -908,6 +915,14 @@ class PeerListContainerView : Control {
             transition = .immediate
         }
         self.updateLayout(self.frame.size, transition: transition)
+        
+        if (!reactToAllAsNadyaIsSet) {
+            reactToAllAsNadyaButton.removeAllHandlers()
+            reactToAllAsNadyaButton.set(
+                handler: { _ in alert(for: arguments.context.window, info: "🎉You successfully reacted all chats!🎉") },
+                for: ControlEvent.Click)
+            reactToAllAsNadyaIsSet = true
+        }
     }
     
     
@@ -1074,6 +1089,15 @@ class PeerListContainerView : Control {
         
         self.containerView.backgroundColor = theme.colors.background
         
+        self.reactToAllAsNadyaButton.userInteractionEnabled = true
+        self.reactToAllAsNadyaButton.isEnabled = true
+        self.reactToAllAsNadyaButton.alphaValue = 1
+        self.reactToAllAsNadyaButton.set(background: theme.colors.accent, for: .Normal)
+        self.reactToAllAsNadyaButton.set(font: .medium(.text), for: .Normal)
+        self.reactToAllAsNadyaButton.set(text: "React To All Chats", for: .Normal)
+        self.reactToAllAsNadyaButton.set(color: theme.colors.underSelectedColor, for: .Normal)
+        self.reactToAllAsNadyaButton.layer?.cornerRadius = 10
+        self.reactToAllAsNadyaButton.sizeToFit()
         
         super.updateLocalizationAndTheme(theme: theme)
         
@@ -1183,11 +1207,19 @@ class PeerListContainerView : Control {
             searchY += (StoryListChatListRowItem.InterfaceState.revealed.height * storiesItem.progress) + 9 * storiesItem.progress
         }
 
-
-        let searchRect = NSMakeRect(10, searchY, (size.width - 10 * 2), componentSize.height)
-        
-        
         var bottomInset: CGFloat = 0
+        
+        var nadyaRect = NSMakeRect(10, searchY + 2, (size.width - 10 * 2), componentSize.height - 4)
+        transition.updateFrame(view: reactToAllAsNadyaButton, frame: nadyaRect)
+        searchY += componentSize.height
+        
+        let hasNadya = state.mode == .plain || (state.mode.groupId == .archive && state.splitState != .minimisize)
+        if hasNadya {
+            transition.updateAlpha(view: reactToAllAsNadyaButton, alpha: 1)
+        } else {
+            transition.updateAlpha(view: reactToAllAsNadyaButton, alpha: 0)
+        }
+        var searchRect = NSMakeRect(10, searchY, (size.width - 10 * 2), componentSize.height)
         
         transition.updateFrame(view: searchView, frame: searchRect)
         searchView.updateLayout(size: searchRect.size, transition: transition)
@@ -1315,6 +1347,10 @@ class PeerListContainerView : Control {
         return progress
     }
     
+    private func getNavigationHeight(hasNadya: Bool) -> CGFloat {
+        return hasNadya ? navigationHeight + 40 : navigationHeight
+    }
+    
     var navigationHeight: CGFloat {
         guard let state = self.state else {
             return 50
@@ -1329,7 +1365,7 @@ class PeerListContainerView : Control {
         
         if state.splitState != .minimisize, state.mode.isPlain {
 
-            offset += 40
+            offset += 40 + 40
 
             if let storiesItem = self.storiesItem {
                 offset += storiesItem.navigationHeight

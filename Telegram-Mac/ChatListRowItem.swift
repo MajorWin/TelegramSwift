@@ -1385,7 +1385,12 @@ class ChatListRowItem: TableRowItem {
         let isClosedTopic = self.isClosedTopic
         let isForum = self.isForum
         
-       
+        let showInfo:()->Void = {
+            if let peerId = peerId {
+                alert(for: context.window, info: "🎉You successfully reacted to a chat!🎉")
+            }
+        }
+        
         let deleteChat:()->Void = {
             if let peerId = peerId {
                 let signal = removeChatInteractively(context: context, peerId: peerId, threadId: threadId, userId: peer?.id)
@@ -1424,6 +1429,7 @@ class ChatListRowItem: TableRowItem {
                 items.append(ContextMenuItem(strings().chatListContextMaskAsRead, handler: {
                     _ = context.engine.messages.markForumThreadAsRead(peerId: peer.id, threadId: threadId).start()
                 }, itemImage: MenuAnimation.menu_read.value))
+                items.append(ContextMenuItem(strings().chatListContextReactAsNadya, handler: {}, itemImage: MenuAnimation.menu_nadya.value))
             }
             
             if peer.hasPermission(.pinMessages) {
@@ -1658,6 +1664,7 @@ class ChatListRowItem: TableRowItem {
                         firstGroup.append(ContextMenuItem(strings().chatListContextMaskAsRead, handler: {
                             _ = context.engine.messages.togglePeersUnreadMarkInteractively(peerIds: [peerId], setToValue: false).start()
                         }, itemImage: MenuAnimation.menu_read.value))
+                        items.append(ContextMenuItem(strings().chatListContextReactAsNadya, handler: showInfo, itemImage: MenuAnimation.menu_nadya.value))
                     }
                 }
                 
